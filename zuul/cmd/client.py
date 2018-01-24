@@ -141,11 +141,6 @@ class Client(zuul.cmd.ZuulApp):
                 if self.args.oldrev == self.args.newrev:
                     parser.error(
                         "The old and new revisions must not be the same.")
-            # if they're not set, we pad them out to zero
-            if self.args.oldrev is None:
-                self.args.oldrev = '0000000000000000000000000000000000000000'
-            if self.args.newrev is None:
-                self.args.newrev = '0000000000000000000000000000000000000000'
 
     def setup_logging(self):
         """Client logging does not rely on conf file"""
